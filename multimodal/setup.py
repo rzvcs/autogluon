@@ -63,9 +63,9 @@ tests_require = [
     "black~=23.0",
     "isort>=5.10",
     "datasets>=2.10.0,<2.15.0",
-    "onnx>=1.13.0,<1.14.0",
-    "onnxruntime>=1.15.0,<1.16.0;platform_system=='Darwin'",
-    "onnxruntime-gpu>=1.15.0,<1.16.0;platform_system!='Darwin'",
+    "onnx>=1.13.0,<1.17.0",
+    "onnxruntime>=1.17.0,<1.19.0;platform_system=='Darwin'",
+    "onnxruntime-gpu>=1.17.0,<1.19.0;platform_system!='Darwin'",
     "tensorrt>=8.6.0,<8.6.2;platform_system=='Linux' and python_version<'3.11'",
 ]
 
