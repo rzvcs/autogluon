@@ -20,20 +20,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: "3.8"
+          python-version: "3.12"
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools wheel twine pypandoc packaging
-      - name: Build and publish
-        env:
-          TWINE_USERNAME: ${{ secrets. PYPI_USERNAME }}
-          TWINE_PASSWORD: ${{ secrets. PYPI_PASSWORD }}
+          pip install setuptools wheel packaging
+          pip install openmim==0.3.9
+          python -m ensurepip --upgrade
+          python -m pip install --upgrade setuptools
+      - name: Build wheel
         run: |
           for v in common core features tabular multimodal timeseries autogluon
           do
             cd "$v"/
-            python setup.py sdist bdist_wheel
-            twine upload dist/* --verbose
+            python setup.py sdist bdist_wheel --dist-dir=../dist  --bdist-dir=../dist2
             cd ..
           done
+      - name: Upload wheel to GitHub Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dist/*.whl"
+          token: ${{ secrets.GITHUB_TOKEN }}
