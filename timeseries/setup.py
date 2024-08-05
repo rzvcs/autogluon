@@ -24,7 +24,7 @@ install_requires = [
     "joblib>=1.1,<2",
     "numpy",  # version range defined in `core/_setup_utils.py`
     "scipy",  # version range defined in `core/_setup_utils.py`
-    "pandas",  # version range defined in `core/_setup_utils.py`
+    "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
     "torch",  # version range defined in `core/_setup_utils.py`
     "lightning",  # version range defined in `core/_setup_utils.py`
     "pytorch_lightning",  # version range defined in `core/_setup_utils.py`

@@ -24,7 +24,7 @@ install_requires = [
     # version ranges added in ag.get_dependency_version_ranges()
     "numpy",  # version range defined in `core/_setup_utils.py`
     "scipy",  # version range defined in `core/_setup_utils.py`
-    "pandas",  # version range defined in `core/_setup_utils.py`
+    "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
     "scikit-learn",  # version range defined in `core/_setup_utils.py`
     "networkx",  # version range defined in `core/_setup_utils.py`
     f"{ag.PACKAGE_NAME}.core=={version}",
