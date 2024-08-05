@@ -23,7 +23,7 @@ install_requires = [
     'numpy',  # version range defined in `core/_setup_utils.py`
     'scipy',  # version range defined in `core/_setup_utils.py`
     'scikit-learn',  # version range defined in `core/_setup_utils.py`
-    'pandas',  # version range defined in `core/_setup_utils.py`
+    'pandas==2.1.4',  # version range defined in `core/_setup_utils.py`
     'matplotlib>=3.4,<3.7',
     'missingno>=0.5.1,<0.6',
     'phik>=0.12.2,<0.13',

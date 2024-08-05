@@ -18,7 +18,7 @@ PYTHON_REQUIRES = ">=3.8, <3.13"
 DEPENDENT_PACKAGES = {
     "boto3": ">=1.34,<2",  # <2 because unlikely to introduce breaking changes in minor releases. >=1.34 because it does not exceed the ResolutionTooDeep limit
     "numpy": ">=1.21,<2",  # Using version supported by pandas    
-    "pandas": ">=2.2.0,<2.3.0",  # pandas with py3.12 support
+    "pandas": ">=2.1.0,<2.3.0",  # pandas with py3.12 support
     "scikit-learn": ">=1.4.0,<=1.5.1",  # support for py3.12
     "scipy": ">=1.11.4,<1.15",  # support for py3.12
     "psutil": ">=5.9.6,<=6",  # support for py3.12
