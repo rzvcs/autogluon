@@ -25,7 +25,7 @@ install_requires = (
         "scipy",
         "scikit-learn",
         "networkx",
-        "pandas==2.1.4==2.1.4",
+        "pandas==2.1.4",
         "tqdm",
         "requests",
         "matplotlib",
