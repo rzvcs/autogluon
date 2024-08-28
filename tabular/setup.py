@@ -22,7 +22,7 @@ version = ag.update_version(version)
 submodule = "tabular"
 install_requires = [
     # version ranges added in ag.get_dependency_version_ranges()
-    "numpy",  # version range defined in `core/_setup_utils.py`
+    "numpy==1.26.4",  # version range defined in `core/_setup_utils.py`
     "scipy",  # version range defined in `core/_setup_utils.py`
     "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
     "scikit-learn",  # version range defined in `core/_setup_utils.py`
@@ -34,13 +34,6 @@ install_requires = [
 extras_require = {
     "lightgbm": [
         "lightgbm>=3.3,<4.4",  # <{N+1} upper cap, where N is the latest released minor version
-    ],
-    "catboost": [
-        # CatBoost wheel build is not working correctly on darwin for CatBoost 1.2, so use old version in this case.
-        # https://github.com/autogluon/autogluon/pull/3190#issuecomment-1540599280
-        # Catboost 1.2 doesn't have wheel for python 3.11
-        "catboost>=1.1,<1.2 ; sys_platform == 'darwin' and python_version < '3.11'",
-        "catboost>=1.1,<1.3; sys_platform != 'darwin'",
     ],
     # FIXME: Debug why xgboost 1.6 has 4x+ slower inference on multiclass datasets compared to 1.4
     #  It is possibly only present on MacOS, haven't tested linux.
@@ -82,7 +75,7 @@ extras_require = {
 # TODO: v1.0: Rename `all` to `core`, make `all` contain everything.
 all_requires = []
 # TODO: Consider adding 'skex' to 'all'
-for extra_package in ["lightgbm", "catboost", "xgboost", "fastai", "ray"]:
+for extra_package in ["lightgbm", "xgboost", "fastai", "ray"]:
     all_requires += extras_require[extra_package]
 all_requires = list(set(all_requires))
 extras_require["all"] = all_requires

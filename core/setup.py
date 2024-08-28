@@ -21,7 +21,7 @@ submodule = "core"
 install_requires = (
     [
         # version ranges added in ag.get_dependency_version_ranges()
-        "numpy",
+        "numpy==1.26.4",
         "scipy",
         "scikit-learn",
         "networkx",
@@ -35,7 +35,7 @@ install_requires = (
     if not ag.LITE_MODE
     else [
         # version ranges added in ag.get_dependency_version_ranges()
-        "numpy",
+        "numpy==1.26.4",
         "scipy",
         "scikit-learn",
         "pandas==2.1.4",
