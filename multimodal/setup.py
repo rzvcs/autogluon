@@ -20,7 +20,7 @@ version = ag.update_version(version)
 submodule = "multimodal"
 install_requires = [
     # version ranges added in ag.get_dependency_version_ranges()
-    "numpy",  # version range defined in `core/_setup_utils.py`
+    "numpy==1.26.4",  # version range defined in `core/_setup_utils.py`
     "scipy",  # version range defined in `core/_setup_utils.py`
     "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
     "scikit-learn",  # version range defined in `core/_setup_utils.py`

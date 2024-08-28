@@ -17,7 +17,7 @@ PYTHON_REQUIRES = ">=3.8, <3.13"
 # Only put packages here that would otherwise appear multiple times across different module's setup.py files.
 DEPENDENT_PACKAGES = {
     "boto3": ">=1.34,<2",  # <2 because unlikely to introduce breaking changes in minor releases. >=1.34 because it does not exceed the ResolutionTooDeep limit
-    "numpy": ">=1.21,<2",  # Using version supported by pandas    
+    "numpy": "==1.26.4",  # Using version supported by pandas    
     "pandas": ">=2.1.0,<2.3.0",  # pandas with py3.12 support
     "scikit-learn": ">=1.4.0,<=1.5.1",  # support for py3.12
     "scipy": ">=1.11.4,<1.15",  # support for py3.12

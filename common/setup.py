@@ -21,7 +21,7 @@ submodule = "common"
 install_requires = (
     [
         # version ranges added in ag.get_dependency_version_ranges()
-        "numpy",  # version range defined in `core/_setup_utils.py`
+        "numpy==1.26.4",  # version range defined in `core/_setup_utils.py`
         "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
         "boto3",  # version range defined in `core/_setup_utils.py`
         "psutil",  # version range defined in `core/_setup_utils.py`
@@ -31,7 +31,7 @@ install_requires = (
     ]
     if not ag.LITE_MODE
     else {
-        "numpy",  # version range defined in `core/_setup_utils.py`
+        "numpy==1.26.4",  # version range defined in `core/_setup_utils.py`
         "pandas==2.1.4",  # version range defined in `core/_setup_utils.py`
         "tqdm",  # version range defined in `core/_setup_utils.py`
     }
